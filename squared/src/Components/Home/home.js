@@ -15,7 +15,6 @@ function Home(){
             console.log('Modal is down', showModal)
         }
     }
-
    
     
     return(
@@ -25,8 +24,16 @@ function Home(){
                 <h1>SQUARED</h1>
             </div>
             <div className="row my-4" id="timing-row">
-                <div className='col-6'>Timed</div>
-                <div className='col-6'>Endless</div>
+                <div className='col-6'>
+                    <div className='my-4'>
+                        Timed
+                    </div>
+                </div>
+                <div className='col-6'>
+                    <div className="my-4">
+                        Endless
+                    </div>
+                </div>
             </div>
             <div className="row my-4" id="diff-row">
                 <div className='col-3'>Easy</div>
@@ -35,7 +42,6 @@ function Home(){
                 <div className='col-3'>Master</div>
             </div>
             <div className='row justify-content-center my-4'>
-
                 <div className='btn btn-success col-1' onClick={playGame}>Start</div>
             </div></>}
         </div>
