@@ -1,4 +1,4 @@
-import { useState, react, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Game from '../Game/game.js'
 
 function Home(){
@@ -15,6 +15,8 @@ function Home(){
             console.log('Modal is down', showModal)
         }
     }
+
+   
     
     return(
         <div>
