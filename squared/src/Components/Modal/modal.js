@@ -7,7 +7,7 @@ function Modal() {
 
     const [toggleModal, setToggleModal] = useState(false);
 
-    <div className="modal">
+    <div className="modal"> 
         <button>Modal</button>
     </div>
 
