@@ -9,10 +9,10 @@ function Home(){
     let playGame = () => {
         if (showModal == true) {
             setShowModal(false)
-            console.log('Modal is down', showModal)
+            console.log('Modal is up', showModal)
         } else {
             setShowModal(true)
-            console.log('Modal is up', showModal)
+            console.log('Modal is down', showModal)
         }
     }
     
