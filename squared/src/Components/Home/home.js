@@ -1,5 +1,5 @@
 import { useState, react, useEffect } from 'react'
-import Modal from '../Modal/modal.js'
+import Game from '../Game/game.js'
 
 function Home(){
     const [timed, setTimed] = useState(true) // timed or endless mode?
@@ -35,7 +35,7 @@ function Home(){
 
                 <div className='btn btn-success col-1' onClick={playGame}>Start</div>
             </div>
-            {showModal ? <Modal playGame={playGame} difficulty={difficulty} timed={timed} /> : ''}
+            {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : ''}
         </div>
     )
 }
