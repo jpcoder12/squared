@@ -1,26 +1,41 @@
-import { useState, react } from 'react'
+import { useState, react, useEffect } from 'react'
 import Modal from '../Modal/modal.js'
 
 function Home(){
     const [timed, setTimed] = useState(true) // timed or endless mode?
     const [difficulty, setDifficulty] = useState(1)
+    const [showModal, setShowModal] = useState(false)
 
+    let playGame = () => {
+        if (showModal == true) {
+            setShowModal(false)
+            console.log('Modal is down')
+        } else {
+            setShowModal(true)
+            console.log('Modal is up')
+        }
+    }
     
     return(
-        <div className="container">
-            <div className="row" id="title-row">
+        <div>
+            <div className="row mt-4 mb-4" id="title-row">
                 <h1>SQUARED</h1>
             </div>
-            <div className="row" id="timing-row">
+            <div className="row my-4" id="timing-row">
                 <div className='col-6'>Timed</div>
                 <div className='col-6'>Endless</div>
             </div>
-            <div className="row" id="diff-row">
+            <div className="row my-4" id="diff-row">
                 <div className='col-3'>Easy</div>
                 <div className='col-3'>Medium</div>
                 <div className='col-3'>Hard</div>
                 <div className='col-3'>Master</div>
             </div>
+            <div className='row justify-content-center my-4'>
+
+                <div className='btn btn-success col-1' onClick={playGame}>Start</div>
+            </div>
+            {showModal ? <Modal playGame={playGame} difficulty={difficulty} timed={timed} /> : ''}
             <Modal />
         </div>
     )
