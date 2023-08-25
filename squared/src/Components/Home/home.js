@@ -20,7 +20,8 @@ function Home(){
     
     return(
         <div>
-            <div className="row mt-4 mb-4" id="title-row">
+            
+            {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : <><div className="row mt-4 mb-4" id="title-row">
                 <h1>SQUARED</h1>
             </div>
             <div className="row my-4" id="timing-row">
@@ -36,8 +37,7 @@ function Home(){
             <div className='row justify-content-center my-4'>
 
                 <div className='btn btn-success col-1' onClick={playGame}>Start</div>
-            </div>
-            {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : ''}
+            </div></>}
         </div>
     )
 }
