@@ -9,10 +9,10 @@ function Home(){
     let playGame = () => {
         if (showModal == true) {
             setShowModal(false)
-            console.log('Modal is down')
+            console.log('Modal is down', showModal)
         } else {
             setShowModal(true)
-            console.log('Modal is up')
+            console.log('Modal is up', showModal)
         }
     }
     
@@ -36,7 +36,6 @@ function Home(){
                 <div className='btn btn-success col-1' onClick={playGame}>Start</div>
             </div>
             {showModal ? <Modal playGame={playGame} difficulty={difficulty} timed={timed} /> : ''}
-            <Modal />
         </div>
     )
 }
