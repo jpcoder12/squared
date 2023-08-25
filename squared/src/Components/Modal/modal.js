@@ -8,7 +8,9 @@ function Modal() {
     const [toggleModal, setToggleModal] = useState(false);
 
     <div className="modal"> 
-        <button>Modal</button>
+    <div className="modal-content">
+        <div className="modal-header">Hello</div>
+    </div>
     </div>
 
 }
