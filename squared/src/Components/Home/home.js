@@ -38,10 +38,10 @@ function Home(){
                     
                     Choose your preferences below and then click 'Start'
                     <div className="row my-4" id="diff-row">
-                        <div className='col-3 mx-1 btn btn-primary' onClick={e => changeDifficulty}>Easy</div>
-                        <div className='col-3 mx-1 btn btn-success' onClick={e => changeDifficulty}>Medium</div>
-                        <div className='col-3 mx-1 btn btn-warning' onClick={e => changeDifficulty}>Hard</div>
-                        <div className='col-3 mx-1 btn btn-danger' onClick={e => changeDifficulty}>Master</div>
+                        <div className='col-3 mx-1 btn btn-primary' onClick={e => changeDifficulty(e)}>Easy</div>
+                        <div className='col-3 mx-1 btn btn-success' onClick={e => changeDifficulty(e)}>Medium</div>
+                        <div className='col-3 mx-1 btn btn-warning' onClick={e => changeDifficulty(e)}>Hard</div>
+                        <div className='col-3 mx-1 btn btn-danger' onClick={e => changeDifficulty(e)}>Master</div>
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col'>
