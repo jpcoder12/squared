@@ -4,15 +4,16 @@ import Game from '../Game/game.js'
 function Home(){
     const [timed, setTimed] = useState(true) // timed or endless mode?
     const [difficulty, setDifficulty] = useState(1)
-    const [showModal, setShowModal] = useState(false)
+    const [startGame, setStartGame] = useState(false)
+    
 
     let playGame = () => {
-        if (showModal == true) {
-            setShowModal(false)
-            console.log('Modal is up', showModal)
+        if (startGame == true) {
+            setStartGame(false)
+            console.log('Game Started', startGame)
         } else {
-            setShowModal(true)
-            console.log('Modal is down', showModal)
+            setStartGame(true)
+            console.log('Game Ended', startGame)
         }
     }
     
@@ -32,12 +33,12 @@ function Home(){
                         <div className='col-3 mx-1 btn btn-danger'>Master</div>
                     </div>
                     <div className="row my-4" id="timing-row">
-                        <div className='col-6'>
+                        <div className='col'>
                             <div className="btn btn-secondary">
                                 Time Limit
                             </div>
                         </div>
-                        <div className='col-6'>
+                        <div className='col'>
                             <div className="btn btn-secondary" id="endless-button">
                                 Endless
                             </div>
@@ -50,7 +51,7 @@ function Home(){
                     </div>
                 </div>
                 <div className="col">
-                    <Game />
+                    <Game difficulty={difficulty} timed={timed}/>
                 </div>
             </div>
             <div className="my-2" id="footer">
