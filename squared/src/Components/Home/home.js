@@ -19,7 +19,7 @@ function Home(){
     
     return(
         <div className='container'>
-            
+        
             {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : 
             <div className='container' id="home">
             <div className="row mt-4 mb-4" id="title-row">

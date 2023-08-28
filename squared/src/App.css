@@ -2,8 +2,9 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('/public/background.jpg');
-  background-size: 150% 200%;  /* This makes the background image cover the entire viewport */
-  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  background-size: 100% 138%; 
+  background-repeat: no-repeat;  
+  background-color: black;
 }
 a {
   text-decoration: none;
