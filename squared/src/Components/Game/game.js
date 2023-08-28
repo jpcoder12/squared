@@ -10,11 +10,14 @@ function Game() {
     }, [])
 
 return (
-<div id="game">
-    <div className="row">
-        <div className="question"></div>
+    <div id="game">
+        <div className="row">
+            <div id="question">Question</div>
+        </div>
+        <div className="row">
+            <div id="answer">Answer</div>
+        </div>
     </div>
-</div>
 )
 
 }
