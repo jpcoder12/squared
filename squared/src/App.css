@@ -1,7 +1,9 @@
 body {
+  margin: 0;
+  padding: 0;
   background-image: url('/public/background.jpg');
-  background-size: fill;
-  background-repeat: no-repeat;
+  background-size: 150% 200%;  /* This makes the background image cover the entire viewport */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
 }
 a {
   text-decoration: none;
@@ -15,7 +17,6 @@ a {
 
 #footer {
   color: white;
-  background-color: rgba(38, 38, 38, 1);
   width: 50%;
   margin: auto;
   border-radius: 5px;
