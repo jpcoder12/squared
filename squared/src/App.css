@@ -44,7 +44,7 @@ a {
   margin: auto;
   width: 70%;
 }
-#timing-row, #diff-row {
+#timing-row, #diff-row, #game {
   padding: 10px;
   justify-content: center;
   border-radius: 5px;

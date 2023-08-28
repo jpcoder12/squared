@@ -1,17 +1,18 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function Game() {
 
+    const [questions, setQuestions] = useState([]);
+    const [answer, setAnswer] = useState(""); 
+
+    useEffect(() => {
+        
+    }, [])
+
 return (
-<div>
-    <div className="row">
-        <i class="fa-solid fa-xmark" id="xmark"></i>
-    </div>
+<div id="game">
     <div className="row">
         <div className="question"></div>
-    </div>
-    <div className="row">
-        <input></input>
     </div>
 </div>
 )
