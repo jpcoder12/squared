@@ -16,7 +16,18 @@ function Home(){
             console.log('Game Ended', startGame)
         }
     }
-    
+    let changeDifficulty = (e) => {
+        let val = e.target.value
+        if (val === 'Master'){
+            setDifficulty(4)
+        } else if (val === 'Hard'){
+            setDifficulty(3)
+        } else if (val === 'Medium'){
+            setDifficulty(2)
+        } else if (val === 'Easy'){
+            setDifficulty(1)
+        }
+    }
     return(
         <div className='container' id="home">
             <div className="row mt-4 mb-4" id="title-row">
@@ -27,10 +38,10 @@ function Home(){
                     
                     Choose your preferences below and then click 'Start'
                     <div className="row my-4" id="diff-row">
-                        <div className='col-3 mx-1 btn btn-primary'>Easy</div>
-                        <div className='col-3 mx-1 btn btn-success'>Medium</div>
-                        <div className='col-3 mx-1 btn btn-warning'>Hard</div>
-                        <div className='col-3 mx-1 btn btn-danger'>Master</div>
+                        <div className='col-3 mx-1 btn btn-primary' onClick={e => changeDifficulty}>Easy</div>
+                        <div className='col-3 mx-1 btn btn-success' onClick={e => changeDifficulty}>Medium</div>
+                        <div className='col-3 mx-1 btn btn-warning' onClick={e => changeDifficulty}>Hard</div>
+                        <div className='col-3 mx-1 btn btn-danger' onClick={e => changeDifficulty}>Master</div>
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col'>
