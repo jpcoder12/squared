@@ -26,6 +26,12 @@ function Home(){
                 <h1>SQUARED</h1>
             </div>
             Choose your preferences below and then click 'Start'
+            <div className="row my-4" id="diff-row">
+                <div className='col-3 mx-3 btn btn-primary'>Easy</div>
+                <div className='col-3 mx-3 btn btn-success'>Medium</div>
+                <div className='col-3 mx-3 btn btn-warning'>Hard</div>
+                <div className='col-3 mx-3 btn btn-danger'>Master</div>
+            </div>
             <div className="row my-4" id="timing-row">
                 <div className='col-6'>
                     <div className="btn btn-secondary">
@@ -38,16 +44,17 @@ function Home(){
                     </div>
                 </div>
             </div>
-            <div className="row my-4" id="diff-row">
-                <div className='col-3 mx-3 btn btn-primary'>Easy</div>
-                <div className='col-3 mx-3 btn btn-success'>Medium</div>
-                <div className='col-3 mx-3 btn btn-warning'>Hard</div>
-                <div className='col-3 mx-3 btn btn-danger'>Master</div>
-            </div>
             <div className='row justify-content-center my-4'>
-                <div className='btn btn-light col-1' onClick={playGame}>Start</div>
+                <div className="row">
+                    <div  id="start-button" className='btn btn-light' onClick={playGame}>Start</div>
+                </div>
+                <div className="my-2" id="footer">
+                    <span>Made with ❤️ by </span>
+                    <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/joshpeoples/"> Joshua Peoples</a> <span>and</span>
+                    <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/bianchimena/"> Bianchi Mena</a>
+                </div>
             </div></div>}
-            <div className='row'></div>
+            
         </div>
     )
 }

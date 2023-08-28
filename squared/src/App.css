@@ -1,7 +1,25 @@
 body {
   background-image: url('/public/background.jpg');
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+  color: rgb(91, 146, 217);
 }
 
+#start-button {
+  width: 15%;
+  margin: auto;
+}
+
+#footer {
+  color: white;
+  background-color: rgba(38, 38, 38, 1);
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+}
 .App {
   text-align: center;
   font-family: 'Patrick Hand', cursive;
@@ -17,12 +35,14 @@ body {
 
 #timing-row {
   margin: auto;
+  width: 30%;
 }
 #diff-row {
   margin: auto;
+  width: 70%;
 }
 #timing-row, #diff-row {
-  width: 70%;
+  
   padding: 10px;
   justify-content: center;
   border-radius: 5px;
