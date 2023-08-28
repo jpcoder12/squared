@@ -18,32 +18,36 @@ function Home(){
    
     
     return(
-        <div>
+        <div className='container'>
             
-            {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : <><div className="row mt-4 mb-4" id="title-row">
+            {showModal ? <Game playGame={playGame} difficulty={difficulty} timed={timed} /> : 
+            <div className='container' id="home">
+            <div className="row mt-4 mb-4" id="title-row">
                 <h1>SQUARED</h1>
             </div>
+            Choose your preferences below and then click 'Start'
             <div className="row my-4" id="timing-row">
                 <div className='col-6'>
-                    <div className='my-4'>
-                        Timed
+                    <div className="btn btn-secondary">
+                        Time Limit
                     </div>
                 </div>
                 <div className='col-6'>
-                    <div className="my-4">
+                    <div className="btn btn-secondary" id="endless-button">
                         Endless
                     </div>
                 </div>
             </div>
             <div className="row my-4" id="diff-row">
-                <div className='col-3'>Easy</div>
-                <div className='col-3'>Medium</div>
-                <div className='col-3'>Hard</div>
-                <div className='col-3'>Master</div>
+                <div className='col-3 mx-3 btn btn-primary'>Easy</div>
+                <div className='col-3 mx-3 btn btn-success'>Medium</div>
+                <div className='col-3 mx-3 btn btn-warning'>Hard</div>
+                <div className='col-3 mx-3 btn btn-danger'>Master</div>
             </div>
             <div className='row justify-content-center my-4'>
-                <div className='btn btn-success col-1' onClick={playGame}>Start</div>
-            </div></>}
+                <div className='btn btn-light col-1' onClick={playGame}>Start</div>
+            </div></div>}
+            <div className='row'></div>
         </div>
     )
 }
