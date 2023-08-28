@@ -49,7 +49,7 @@ function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="col" id="game">
+                <div className="col">
                     <Game />
                 </div>
             </div>
