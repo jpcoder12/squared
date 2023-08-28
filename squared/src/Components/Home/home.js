@@ -17,7 +17,8 @@ function Home(){
         }
     }
     let changeDifficulty = (e) => {
-        let val = e.target.value
+        let val = e.target.innerHTML
+        console.log(e)
         if (val === 'Master'){
             setDifficulty(4)
         } else if (val === 'Hard'){
