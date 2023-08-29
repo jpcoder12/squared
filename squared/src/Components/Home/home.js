@@ -36,8 +36,7 @@ function Home(){
             </div>
             <div className='row'>
                 {!startGame ? <div className='col'>
-                    
-                    Choose your preferences below and then click 'Start'
+                    <div id="instructions">Choose your preferences below and then click 'Start'</div>
                     <div className="row my-4" id="diff-row">
                         <div className='col-3 mx-1 btn btn-primary' onClick={e => changeDifficulty(e)}>Easy</div>
                         <div className='col-3 mx-1 btn btn-success' onClick={e => changeDifficulty(e)}>Medium</div>
@@ -58,7 +57,7 @@ function Home(){
                     </div>
                     <div className='row justify-content-center my-4'>
                         <div className="row">
-                            <div  id="start-button" className='btn btn-light' onClick={playGame}>Start</div>
+                            <div id="start-button" className='btn btn-light' onClick={playGame}>Start</div>
                         </div>
                     </div>
                 </div> : ''}
