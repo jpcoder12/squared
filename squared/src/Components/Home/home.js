@@ -35,7 +35,7 @@ function Home(){
                 <h1>SQUARED</h1>
             </div>
             <div className='row'>
-                <div className='col'>
+                {!startGame ? <div className='col'>
                     
                     Choose your preferences below and then click 'Start'
                     <div className="row my-4" id="diff-row">
@@ -61,10 +61,10 @@ function Home(){
                             <div  id="start-button" className='btn btn-light' onClick={playGame}>Start</div>
                         </div>
                     </div>
-                </div>
-                <div className="col">
+                </div> : ''}
+                {startGame ? <div className="col">
                     <Game difficulty={difficulty} timed={timed}/>
-                </div>
+                </div> : ''}
             </div>
             <div className="my-2" id="footer">
                 <span>Made with ❤️ by </span>
