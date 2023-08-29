@@ -58,13 +58,13 @@ a {
 #timing-row > .btn {
   width: fit-content;
 }
+
 #home {
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 8px;
   box-shadow: 5px 5px 10px black;
   margin-top: 20vh;
   padding: 3%;
-  min-width: 90%;
   background-color: rgba(82, 82, 82, 0.2);
   background-image: linear-gradient(to bottom, rgba(82,82,82,.0.2), rgba(82,82,82,0.2)), url("/public/crumbled-paper-background.png");
   color: white;
