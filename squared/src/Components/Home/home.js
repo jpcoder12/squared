@@ -5,6 +5,7 @@ function Home(){
     const [timed, setTimed] = useState(true) // timed or endless mode?
     const [difficulty, setDifficulty] = useState(1)
     const [startGame, setStartGame] = useState(false)
+    const [info, setInfo] = useState("Choose your preferences below and then click 'Start'")
     
 
     let playGame = () => {
@@ -29,6 +30,25 @@ function Home(){
             setDifficulty(1)
         }
     }
+
+    let setMessage = (e) => {
+        let val = e.target.innerHTML
+        console.log(e)
+        if (val === 'Master'){
+            setInfo("For those who really want a challenge.")
+        } else if (val === 'Hard'){
+            setInfo("Adding cubes into the mix")
+        } else if (val === 'Medium'){
+            setInfo("When you're ready to take on the big boys")
+        } else if (val === 'Easy'){
+            setInfo("Starting off slow...")
+        }
+    }
+
+    let resetMessage = () => {
+        setInfo("Choose your preferences below and then click 'Start'");
+    }
+    
     return(
         <div className='container' id="home">
             <div className="row mt-4 mb-4" id="title-row">
@@ -36,12 +56,12 @@ function Home(){
             </div>
             <div className='row'>
                 {!startGame ? <div className='col'>
-                    <div id="instructions">Choose your preferences below and then click 'Start'</div>
+                    <div id="instructions">{info}</div>
                     <div className="row my-4" id="diff-row">
-                        <div className='col-3 mx-1 btn btn-primary' onClick={e => changeDifficulty(e)}>Easy</div>
-                        <div className='col-3 mx-1 btn btn-success' onClick={e => changeDifficulty(e)}>Medium</div>
-                        <div className='col-3 mx-1 btn btn-warning' onClick={e => changeDifficulty(e)}>Hard</div>
-                        <div className='col-3 mx-1 btn btn-danger' onClick={e => changeDifficulty(e)}>Master</div>
+                        <div className='col-3 mx-1 btn btn-primary' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
+                        <div className='col-3 mx-1 btn btn-success' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
+                        <div className='col-3 mx-1 btn btn-warning' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
+                        <div className='col-3 mx-1 btn btn-danger' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col'>
