@@ -34,13 +34,12 @@ function Home(){
 
     let setMessage = (e) => {
         let val = e.target.innerHTML
-        console.log(e)
         if (val === 'Master'){
             setInfo("For those who really want a challenge.")
         } else if (val === 'Hard'){
             setInfo("Adding cubes into the mix")
         } else if (val === 'Medium'){
-            setInfo("When you're ready to take on the big boys")
+            setInfo("When you're ready to take on the big ones")
         } else if (val === 'Easy'){
             setInfo("Starting off slow...")
         } else if (val === 'Time Limit'){
@@ -49,16 +48,8 @@ function Home(){
             setInfo("I could do this all day!")
         }
     }
-    let timeoutId
-
     let resetMessage = () => {
-        if (timeoutId) {
-            clearTimeout(timeoutId); // If there's a timeout set, clear it
-        }
-    
-        timeoutId = setTimeout(() => {
-            setInfo("Choose your preferences below and then click 'Start'");
-        }, 500);
+        setInfo("Choose your preferences below and then click 'Start'");
     }
     
     return(

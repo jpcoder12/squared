@@ -42,7 +42,7 @@ return (
         </div>
         <div className='row justify-content-center'>
           <div className="row">
-              <div id="start-button" className='btn btn-light' onClick={props.playGame}>Back</div>
+              <div id="start-button" className='btn btn-danger' onClick={props.playGame}>Exit</div>
           </div>
         </div>
     </div>
