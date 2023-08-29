@@ -7,6 +7,7 @@ function Home(){
     const [startGame, setStartGame] = useState(false)
     const [info, setInfo] = useState("Choose your preferences below and then click 'Start'")
     
+    
 
     let playGame = () => {
         if (startGame == true) {
@@ -42,11 +43,22 @@ function Home(){
             setInfo("When you're ready to take on the big boys")
         } else if (val === 'Easy'){
             setInfo("Starting off slow...")
+        } else if (val === 'Time Limit'){
+            setInfo("60 seconds to complete as many as possible")
+        } else if (val === 'Endless'){
+            setInfo("I could do this all day!")
         }
     }
+    let timeoutId
 
     let resetMessage = () => {
-        setInfo("Choose your preferences below and then click 'Start'");
+        if (timeoutId) {
+            clearTimeout(timeoutId); // If there's a timeout set, clear it
+        }
+    
+        timeoutId = setTimeout(() => {
+            setInfo("Choose your preferences below and then click 'Start'");
+        }, 500);
     }
     
     return(
@@ -65,12 +77,12 @@ function Home(){
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col'>
-                            <div className="btn btn-secondary">
+                            <div className="btn btn-secondary" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
                                 Time Limit
                             </div>
                         </div>
                         <div className='col'>
-                            <div className="btn btn-secondary" id="endless-button">
+                            <div className="btn btn-secondary" id="endless-button" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
                                 Endless
                             </div>
                         </div>
