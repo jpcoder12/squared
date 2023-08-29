@@ -76,3 +76,6 @@ a {
   width: 30rem;
   margin: auto;
 }
+#game > div {
+  height: 3em;
+}
