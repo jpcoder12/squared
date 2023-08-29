@@ -32,14 +32,24 @@ function Game(props) {
     }, [props])
 
 return (
-    <div id="game">
+  <>
+    <div id="game" className='col'>
         <div className="row">
-            <div id="question">{answer}</div>
+            <div id="question">Question</div>
         </div>
         <div className="row">
             <div id="answer">Answer</div>
         </div>
+        <div className='row justify-content-center'>
+          <div className="row">
+              <div id="start-button" className='btn btn-light' onClick={props.playGame}>Back</div>
+          </div>
+        </div>
     </div>
+    
+  </>
+    
+    
 )
 
 }

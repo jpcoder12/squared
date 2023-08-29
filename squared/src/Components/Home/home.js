@@ -61,8 +61,9 @@ function Home(){
                         </div>
                     </div>
                 </div> : ''}
-                {startGame ? <div className="col">
-                    <Game difficulty={difficulty} timed={timed}/>
+                {startGame ? 
+                <div> {/* col */}
+                    <Game difficulty={difficulty} timed={timed} playGame={playGame}/>
                 </div> : ''}
             </div>
             <div className="my-2" id="footer">
