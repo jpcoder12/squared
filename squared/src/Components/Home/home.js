@@ -70,10 +70,16 @@ function Home(){
                     <div id="instructions">{info}</div>
                     <div className="row mb-4 mt-1" id="diff-row" onMouseOut={e => resetMessage()}>
                         <div className="col">
-                            <i className="mx-2 fa-solid fa-user-ninja fa-shake fa-lg" style={{color: '#000'}}></i>
+                            
+                            
+                            
+                            {difficulty === 1 ? <i className="fa-solid fa-baby fa-spin fa-spin-reverse fa-lg" style={{color: '#000'}}></i> : ''}
                             <div className={difficulty === 1 ? 'mx-1 btn btn-success selected': 'mx-1 btn btn-success'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
+                            {difficulty === 2 ? <i className="fa-regular fa-face-grin-stars fa-beat-fade" style={{color: '#000'}}></i> : ''}
                             <div className={difficulty === 2 ? 'mx-1 btn btn-primary selected': 'mx-1 btn btn-primary'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
+                            {difficulty === 3 ? <i className="fa-solid fa-face-angry fa-bounce fa-lg" style={{color: '#000'}}></i> : ''}
                             <div className={difficulty === 3 ? 'mx-1 btn btn-warning selected': 'mx-1 btn btn-warning'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
+                            {difficulty === 4 ? <i className="fa-solid fa-user-ninja fa-shake fa-lg" style={{color: '#000'}}></i>: ''}
                             <div className={difficulty === 4 ? 'mx-1 btn btn-danger selected': 'mx-1 btn btn-danger'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
                         </div>
                     </div>
