@@ -52,10 +52,10 @@ a {
 
 #diff-row {
   margin: auto;
-  width: 30%;
+  width: fit-content;
 }
 #timing-row, #diff-row, #game {
-  width: 40%;
+  width: fit-content;
   padding: 5px;
   justify-content: center;
   border-radius: 5px;
