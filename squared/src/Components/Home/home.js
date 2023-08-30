@@ -42,7 +42,7 @@ function Home(){
             setInfo("When you're ready to take on the big ones")
         } else if (val === 'Easy'){
             setInfo("Starting off slow...")
-        } else if (val === 'Time Limit'){
+        } else if (val === 'Timed'){
             setInfo("60 seconds to complete as many as possible")
         } else if (val === 'Endless'){
             setInfo("I could do this all day!")
