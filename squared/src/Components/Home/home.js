@@ -60,20 +60,24 @@ function Home(){
             <div className='row'>
                 {!startGame ? <div className='col'>
                     <div id="instructions">{info}</div>
-                    <div className="row my-4" id="diff-row">
-                        <div className='col-3 mx-1 btn btn-primary' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
-                        <div className='col-3 mx-1 btn btn-success' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
-                        <div className='col-3 mx-1 btn btn-warning' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
-                        <div className='col-3 mx-1 btn btn-danger' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
+                    <div className="row mb-4 mt-1" id="diff-row">
+                        <div className="col">
+                            <i className="mx-2 fa-solid fa-user-ninja fa-shake fa-lg" style={{color: '#000'}}></i>
+                            <div className='mx-1 btn btn-primary' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
+                            <div className='mx-1 btn btn-success' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
+                            <div className='mx-1 btn btn-warning' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
+                            <div className='mx-1 btn btn-danger' onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
+                        </div>
+                    </div>
+                    <div className='row'>
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col'>
-                            <div className="btn btn-secondary" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
+                            <i className="fa-regular fa-clock fa-spin-pulse fa-lg mx-2" style={{color: '#000'}}></i>
+                            <div className="btn btn-secondary mx-2" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
                                 Time Limit
                             </div>
-                        </div>
-                        <div className='col'>
-                            <div className="btn btn-secondary" id="endless-button" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
+                            <div className="btn btn-secondary mx-2" id="endless-button" onMouseOut={e => resetMessage()} onMouseOver={e => setMessage(e)}>
                                 Endless
                             </div>
                         </div>

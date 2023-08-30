@@ -20,9 +20,17 @@ a {
 #footer, #instructions {
   color: white;
   background-color: rgba(0, 0, 0, .5);
-  width: fit-content;
   margin: auto;
   border-radius: 5px;
+  padding: 1%;
+}
+
+#footer {
+  width: fit-content;
+}
+
+#instructions {
+  width: 40%;
 }
 .App {
   text-align: center;
