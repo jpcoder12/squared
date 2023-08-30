@@ -50,6 +50,13 @@ a {
   width: 18rem;
 }
 
+.selected {
+  border: 2px solid rgb(146, 192, 251);
+}
+.selected:hover {
+  border: 2px solid rgb(146, 192, 251);
+}
+
 #diff-row {
   margin: auto;
   width: fit-content;

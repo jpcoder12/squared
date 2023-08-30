@@ -48,6 +48,14 @@ function Home(){
             setInfo("I could do this all day!")
         }
     }
+    function setTimeSetting(e) {
+        let val = e.target.innerHTML
+        if (val === 'Timed'){
+            setTimed(true)
+        } else if (val === 'Endless'){
+            setTimed(false)
+        }
+    }
     let resetMessage = () => {
         setInfo("Choose your preferences below and then click 'Start'");
     }
@@ -63,21 +71,23 @@ function Home(){
                     <div className="row mb-4 mt-1" id="diff-row" onMouseOut={e => resetMessage()}>
                         <div className="col">
                             <i className="mx-2 fa-solid fa-user-ninja fa-shake fa-lg" style={{color: '#000'}}></i>
-                            <div className='mx-1 btn btn-primary' onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
-                            <div className='mx-1 btn btn-success' onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
-                            <div className='mx-1 btn btn-warning' onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
-                            <div className='mx-1 btn btn-danger' onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
+                            <div className={difficulty === 1 ? 'mx-1 btn btn-success selected': 'mx-1 btn btn-success'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
+                            <div className={difficulty === 2 ? 'mx-1 btn btn-primary selected': 'mx-1 btn btn-primary'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Medium</div>
+                            <div className={difficulty === 3 ? 'mx-1 btn btn-warning selected': 'mx-1 btn btn-warning'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Hard</div>
+                            <div className={difficulty === 4 ? 'mx-1 btn btn-danger selected': 'mx-1 btn btn-danger'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Master</div>
                         </div>
                     </div>
                     <div className="row my-4" id="timing-row">
                         <div className='col' onMouseOut={e => resetMessage()}>
-                            <i className="fa-regular fa-clock fa-spin-pulse fa-lg mx-2" style={{color: '#000'}}></i>
-                            <div className="btn btn-secondary mx-2"  onMouseOver={e => setMessage(e)}>
-                                Time Limit
+                            
+                            <div className={timed ? "btn btn-secondary mx-2 selected" : "btn btn-secondary mx-2"}   onMouseOver={e => setMessage(e)} onClick={e => setTimeSetting(e)}>
+                                Timed
                             </div>
-                            <div className="btn btn-secondary mx-2" id="endless-button" onMouseOver={e => setMessage(e)}>
+                            <div className={timed ? "btn btn-secondary mx-2" : "btn btn-secondary mx-2 selected"} id="endless-button" onMouseOver={e => setMessage(e)} onClick={e => setTimeSetting(e)}>
                                 Endless
                             </div>
+                            {!timed ? <div><i className="fa-solid fa-infinity fa-beat-fade mx-2 pt-1" style={{color: '#000'}}></i></div> : ''}
+                            {timed ? <div><i className="fa-regular fa-clock fa-spin-pulse fa-lg mx-2" style={{color: '#000'}}></i></div> : ''}
                         </div>
                     </div>
                     <div className='row justify-content-center my-4'>
