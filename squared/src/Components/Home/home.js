@@ -10,7 +10,7 @@ function Home(){
     
 
     let playGame = () => {
-        if (startGame == true) {
+        if (startGame === true) {
             setStartGame(false)
             console.log('Game Started', startGame)
         } else {
@@ -70,9 +70,6 @@ function Home(){
                     <div id="instructions">{info}</div>
                     <div className="row mb-4 mt-1" id="diff-row" onMouseOut={e => resetMessage()}>
                         <div className="col">
-                            
-                            
-                            
                             {difficulty === 1 ? <i className="fa-solid fa-baby fa-spin fa-spin-reverse fa-lg" style={{color: '#000'}}></i> : ''}
                             <div className={difficulty === 1 ? 'mx-1 btn btn-success selected': 'mx-1 btn btn-success'} onMouseOver={e => setMessage(e)} onClick={e => changeDifficulty(e)}>Easy</div>
                             {difficulty === 2 ? <i className="fa-regular fa-face-grin-stars fa-beat-fade" style={{color: '#000'}}></i> : ''}
