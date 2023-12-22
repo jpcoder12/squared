@@ -96,3 +96,13 @@ a {
 #game > div {
   height: 3em;
 }
+
+.deplete-fill {
+  background-color: green;
+  height: 100%;
+}
+
+.time-box {
+  background-color: rgba(0, 0, 0, .3);
+  height: 10px;
+}

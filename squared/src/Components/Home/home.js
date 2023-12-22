@@ -7,7 +7,23 @@ function Home(){
     const [startGame, setStartGame] = useState(false)
     const [info, setInfo] = useState("Choose your preferences below and then click 'Start'")
     
-    
+    // delete below state vars after testing
+    const totalDuration = 100
+    const [timeRemaining, setTimeRemaining] = useState(totalDuration)
+    const widthPercentage = (timeRemaining / totalDuration) * 100;
+
+
+    useEffect(() => {
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            return;
+        }
+        const timer = setInterval(() => {
+            setTimeRemaining(prevTime => prevTime - 1);
+        }, 1000);
+        
+        return () => clearInterval(timer);
+    }, [timeRemaining]);
 
     let playGame = () => {
         if (startGame === true) {
@@ -62,6 +78,11 @@ function Home(){
     
     return(
         <div className='container' id="home">
+            <div className='row'>
+                <div className='row time-box'>
+                    <div className='deplete-fill' style={{width: `${widthPercentage}`}}></div>
+                </div>
+            </div>
             <div className="row mt-4 mb-4" id="title-row">
                 <h1>SQUARED</h1>
             </div>
